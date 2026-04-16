@@ -1,0 +1,137 @@
+RAW DATA: chia_without_scope
+PARSED DATA: chia_without_scope_parsedRE_globalAndTrainDownsampling
+
+COMMAND
+python re_parseChia.py --output_dir ../data/chia_without_scope_parsedRE_globalAndTrainDownsampling --train_downsample_rate 0.5 --global_downsample_rate 0.625
+
+2026-01-30 19:28:19 - INFO - __main__ - Parsing 1650 files for relation extraction...
+2026-01-30 19:28:19 - INFO - __main__ - Applying global negative downsampling rate to complete dataset: 0.625
+2026-01-30 19:28:21 - INFO - __main__ - --- Parsing Statistics ---
+2026-01-30 19:28:21 - INFO - __main__ - Positive relations: 33711
+2026-01-30 19:28:21 - INFO - __main__ - Negatives kept:     99932
+2026-01-30 19:28:21 - INFO - __main__ - Negatives dropped:  60105
+2026-01-30 19:28:21 - INFO - __main__ - Unknown relations: 452 ({'v-AND', 'NOT', 'causal', 'multi'})
+2026-01-30 19:28:21 - INFO - __main__ - Total pairs found:  193748
+2026-01-30 19:28:21 - INFO - __main__ - Final Neg/Pos Ratio: 2.96 : 1
+2026-01-30 19:28:21 - INFO - __main__ - Final relation types (12): ['NO_RELATION', 'AND', 'Has_context', 'Has_index', 'Has_mood', 'Has_multiplier', 'Has_negation', 'Has_qualifier', 'Has_temporal', 'Has_value', 'OR', 'Subsumes']
+
+2026-01-30 19:28:22 - INFO - __main__ - Splitting dataset into Train (80%), Validation (10%), Test (10%)...
+2026-01-30 19:28:49 - INFO - __main__ - Downsampling training split negative samples (rate=0.5)...
+2026-01-30 19:28:49 - INFO - __main__ -   Train size before: 106915
+2026-01-30 19:28:53 - INFO - __main__ -   Train size after downsampling:  66659
+
+==================================================
+DATASET LABEL DISTRIBUTION
+==================================================
+
+Split: TRAIN (n=66659)
+ID   Label Name                Count    %
+---------------------------------------------
+0    NO_RELATION               39690     59.5%
+1    AND                       2019       3.0%
+2    Has_context               121        0.2%
+3    Has_index                 448        0.7%
+4    Has_mood                  230        0.3%
+5    Has_multiplier            344        0.5%
+6    Has_negation              478        0.7%
+7    Has_qualifier             1877       2.8%
+8    Has_temporal              1679       2.5%
+9    Has_value                 1918       2.9%
+10   OR                        16625     24.9%
+11   Subsumes                  1230       1.8%
+
+Split: VALIDATION (n=13363)
+ID   Label Name                Count    %
+---------------------------------------------
+0    NO_RELATION               9992      74.8%
+1    AND                       252        1.9%
+2    Has_context               15         0.1%
+3    Has_index                 56         0.4%
+4    Has_mood                  29         0.2%
+5    Has_multiplier            43         0.3%
+6    Has_negation              60         0.4%
+7    Has_qualifier             235        1.8%
+8    Has_temporal              210        1.6%
+9    Has_value                 239        1.8%
+10   OR                        2078      15.6%
+11   Subsumes                  154        1.2%
+
+Split: TEST (n=13365)
+ID   Label Name                Count    %
+---------------------------------------------
+0    NO_RELATION               9994      74.8%
+1    AND                       252        1.9%
+2    Has_context               15         0.1%
+3    Has_index                 56         0.4%
+4    Has_mood                  28         0.2%
+5    Has_multiplier            43         0.3%
+6    Has_negation              60         0.4%
+7    Has_qualifier             235        1.8%
+8    Has_temporal              210        1.6%
+9    Has_value                 240        1.8%
+10   OR                        2078      15.5%
+11   Subsumes                  154        1.2%
+
+
+---------------------------------------------------------------
+
+--- RE TRAIN STATS ---
+Total candidate entity pairs: 66659
+Positive samples:    26969
+Negative samples:    39690
+Class balance ratio:   1 positive : 1.47 negative
+
+Relation Type             Count    %
+OR                        16625     61.6%
+AND                       2019       7.5%
+Has_value                 1918       7.1%
+Has_qualifier             1877       7.0%
+Has_temporal              1679       6.2%
+Subsumes                  1230       4.6%
+Has_negation              478        1.8%
+Has_index                 448        1.7%
+Has_multiplier            344        1.3%
+Has_mood                  230        0.9%
+Has_context               121        0.4%
+2026-01-30 19:30:43 - INFO - __main__ - Analyzing RE Split: VALIDATION
+
+--- RE VALIDATION STATS ---
+Total candidate entity pairs: 13363
+Positive samples:    3371
+Negative samples:    9992
+Class balance ratio:   1 positive : 2.96 negative
+
+Relation Type             Count    %
+OR                        2078      61.6%
+AND                       252        7.5%
+Has_value                 239        7.1%
+Has_qualifier             235        7.0%
+Has_temporal              210        6.2%
+Subsumes                  154        4.6%
+Has_negation              60         1.8%
+Has_index                 56         1.7%
+Has_multiplier            43         1.3%
+Has_mood                  29         0.9%
+Has_context               15         0.4%
+2026-01-30 19:30:43 - INFO - __main__ - Analyzing RE Split: TEST
+
+--- RE TEST STATS ---
+Total candidate entity pairs: 13365
+Positive samples:    3371
+Negative samples:    9994
+Class balance ratio:   1 positive : 2.96 negative
+
+Relation Type             Count    %
+OR                        2078      61.6%
+AND                       252        7.5%
+Has_value                 240        7.1%
+Has_qualifier             235        7.0%
+Has_temporal              210        6.2%
+Subsumes                  154        4.6%
+Has_negation              60         1.8%
+Has_index                 56         1.7%
+Has_multiplier            43         1.3%
+Has_mood                  28         0.8%
+Has_context               15         0.4%
+
+

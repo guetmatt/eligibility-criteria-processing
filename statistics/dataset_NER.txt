@@ -1,0 +1,98 @@
+RAW DATA: chia_without_scope
+FULLY PARSED DATASET: chia_without_scope_parsedNER_v1
+
+--- NER TRAIN STATS ---
+Total sentences:    8157
+Total entity spans: 23879
+Entity type               Spans    Avg token count
+-------------------------------------------------------
+Condition                 6839     3.74
+Qualifier                 2336     2.72
+Value                     2108     3.88
+Measurement               2037     4.60
+Procedure                 2028     3.61
+Drug                      1986     4.23
+Temporal                  1915     2.88
+Person                    971      1.27
+Observation               627      3.29
+Negation                  502      1.47
+Reference_point           463      2.96
+Multiplier                442      3.06
+Mood                      343      2.02
+Non-query-able            248      12.87
+Device                    210      4.18
+Undefined_semantics       162      5.44
+Post-eligibility          161      17.60
+Subjective_judgement      115      5.94
+Visit                     94       3.71
+Context_Error             82       10.29
+Non-representable         78       18.71
+Not_a_criteria            53       23.34
+Informed_consent          40       9.62
+Pregnancy_considerations  24       25.58
+Competing_trial           14       13.71
+Intoxication_considerations 1        16.00
+2026-01-30 17:32:41 - INFO - __main__ - Analyzing NER split: VALIDATION
+
+--- NER VALIDATION STATS ---
+Total sentences:    1020
+Total entity spans: 3058
+Entity type               Spans    Avg token count
+-------------------------------------------------------
+Condition                 884      3.62
+Qualifier                 303      2.69
+Value                     292      4.09
+Measurement               288      4.77
+Temporal                  245      3.01
+Procedure                 240      3.65
+Drug                      232      4.35
+Person                    119      1.25
+Observation               73       3.59
+Negation                  65       1.40
+Reference_point           56       2.86
+Multiplier                48       2.98
+Mood                      45       1.91
+Non-query-able            32       9.81
+Device                    26       4.31
+Post-eligibility          21       21.52
+Undefined_semantics       19       4.84
+Subjective_judgement      14       9.50
+Visit                     14       4.43
+Context_Error             12       4.42
+Non-representable         11       16.45
+Not_a_criteria            9        11.78
+Informed_consent          5        8.40
+Pregnancy_considerations  3        21.33
+Competing_trial           2        67.50
+2026-01-30 17:32:41 - INFO - __main__ - Analyzing NER split: TEST
+
+--- NER TEST STATS ---
+Total sentences:    1020
+Total entity spans: 3025
+Entity type               Spans    Avg token count
+-------------------------------------------------------
+Condition                 824      3.77
+Qualifier                 330      2.73
+Value                     272      3.84
+Drug                      268      4.17
+Measurement               268      4.60
+Procedure                 249      3.60
+Temporal                  244      2.77
+Person                    129      1.26
+Observation               75       3.71
+Negation                  60       1.42
+Reference_point           59       2.97
+Multiplier                47       3.04
+Mood                      42       2.14
+Non-query-able            30       14.20
+Device                    23       4.13
+Undefined_semantics       21       3.00
+Post-eligibility          20       15.25
+Subjective_judgement      16       5.25
+Non-representable         12       9.67
+Visit                     10       3.10
+Context_Error             10       18.40
+Not_a_criteria            6        14.00
+Informed_consent          5        5.60
+Pregnancy_considerations  3        24.33
+Competing_trial           2        7.00

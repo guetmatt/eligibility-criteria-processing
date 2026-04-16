@@ -1,0 +1,117 @@
+COMMAND
+!python drive/MyDrive/masters_thesis_computing/src/ner_training.py \
+  --data_dir "drive/MyDrive/masters_thesis_computing/data/chia_without_scope_parsedNER_v1" \
+  --output_dir "drive/MyDrive/masters_thesis_computing/models/NER_chia_seq_v1" \
+  --model_checkpoint "emilyalsentzer/Bio_ClinicalBERT" \
+  --eval_method "seq" \
+  --hpo_trials 10
+
+
+BEST HYPERPARAMETERS:
+BestRun(run_id='7', objective=1.8199114549059074, hyperparameters={'learning_rate': 3.505683725208616e-05, 'per_device_train_batch_size': 16, 'weight_decay': 0.19617991727210804, 'num_train_epochs': 4}, run_summary=None)
+
+
+TRAINING RESULTS:
+{'train_runtime': '298', 'train_samples_per_second': '109.5', 'train_steps_per_second': '6.847', 'train_loss': '0.2104', 'epoch': '4'}
+100% 2040/2040 [04:58<00:00,  6.84it/s]
+2026-01-30 16:48:06 - INFO - __main__ - Evaluating the trained model on the test set...
+100% 128/128 [00:07<00:00, 18.06it/s]
+
+==============================
+FINAL TEST METRICS - OVERALL
+==============================
+eval_loss: 0.1965
+eval_model_preparation_time: 0.0026
+eval_precision: 0.2883
+eval_recall: 0.3011
+eval_f1: 0.2946
+eval_accuracy: 0.9419
+eval_runtime: 9.0846
+eval_samples_per_second: 112.2780
+eval_steps_per_second: 7.0450
+epoch: 0.0000
+==============================
+
+==============================
+FINAL TEST METRICS - PER ENTITY TYPE
+==============================
+eval_entity_Competing_trial_f1: 0.0000
+eval_entity_Competing_trial_precision: 0.0000
+eval_entity_Competing_trial_recall: 0.0000
+eval_entity_Condition_f1: 0.3399
+eval_entity_Condition_precision: 0.3173
+eval_entity_Condition_recall: 0.3659
+eval_entity_Context_Error_f1: 0.0000
+eval_entity_Context_Error_precision: 0.0000
+eval_entity_Context_Error_recall: 0.0000
+eval_entity_Device_f1: 0.1053
+eval_entity_Device_precision: 0.1333
+eval_entity_Device_recall: 0.0870
+eval_entity_Drug_f1: 0.2243
+eval_entity_Drug_precision: 0.2210
+eval_entity_Drug_recall: 0.2276
+eval_entity_Informed_consent_f1: 0.0000
+eval_entity_Informed_consent_precision: 0.0000
+eval_entity_Informed_consent_recall: 0.0000
+eval_entity_Measurement_f1: 0.2355
+eval_entity_Measurement_precision: 0.2360
+eval_entity_Measurement_recall: 0.2351
+eval_entity_Mood_f1: 0.2295
+eval_entity_Mood_precision: 0.3889
+eval_entity_Mood_recall: 0.1628
+eval_entity_Multiplier_f1: 0.1935
+eval_entity_Multiplier_precision: 0.1957
+eval_entity_Multiplier_recall: 0.1915
+eval_entity_Negation_f1: 0.3276
+eval_entity_Negation_precision: 0.3393
+eval_entity_Negation_recall: 0.3167
+eval_entity_Non-query-able_f1: 0.0000
+eval_entity_Non-query-able_precision: 0.0000
+eval_entity_Non-query-able_recall: 0.0000
+eval_entity_Non-representable_f1: 0.0000
+eval_entity_Non-representable_precision: 0.0000
+eval_entity_Non-representable_recall: 0.0000
+eval_entity_Not_a_criteria_f1: 0.1333
+eval_entity_Not_a_criteria_precision: 0.1250
+eval_entity_Not_a_criteria_recall: 0.1429
+eval_entity_Observation_f1: 0.0577
+eval_entity_Observation_precision: 0.1071
+eval_entity_Observation_recall: 0.0395
+eval_entity_Person_f1: 0.6534
+eval_entity_Person_precision: 0.6721
+eval_entity_Person_recall: 0.6357
+eval_entity_Post-eligibility_f1: 0.0000
+eval_entity_Post-eligibility_precision: 0.0000
+eval_entity_Post-eligibility_recall: 0.0000
+eval_entity_Pregnancy_considerations_f1: 0.0000
+eval_entity_Pregnancy_considerations_precision: 0.0000
+eval_entity_Pregnancy_considerations_recall: 0.0000
+eval_entity_Procedure_f1: 0.3379
+eval_entity_Procedure_precision: 0.2997
+eval_entity_Procedure_recall: 0.3874
+eval_entity_Qualifier_f1: 0.2476
+eval_entity_Qualifier_precision: 0.2573
+eval_entity_Qualifier_recall: 0.2387
+eval_entity_Reference_point_f1: 0.2083
+eval_entity_Reference_point_precision: 0.1852
+eval_entity_Reference_point_recall: 0.2381
+eval_entity_Subjective_judgement_f1: 0.0000
+eval_entity_Subjective_judgement_precision: 0.0000
+eval_entity_Subjective_judgement_recall: 0.0000
+eval_entity_Temporal_f1: 0.3057
+eval_entity_Temporal_precision: 0.2804
+eval_entity_Temporal_recall: 0.3360
+eval_entity_Undefined_semantics_f1: 0.0000
+eval_entity_Undefined_semantics_precision: 0.0000
+eval_entity_Undefined_semantics_recall: 0.0000
+eval_entity_Value_f1: 0.3350
+eval_entity_Value_precision: 0.3038
+eval_entity_Value_recall: 0.3732
+eval_entity_Visit_f1: 0.0000
+eval_entity_Visit_precision: 0.0000
+eval_entity_Visit_recall: 0.0000
+==============================
+
+Writing model shards: 100% 1/1 [00:01<00:00,  1.74s/it]
+2026-01-30 16:48:16 - INFO - __main__ - Trained model and tokenizer saved to drive/MyDrive/masters_thesis_computing/models/NER_chia_seq_v1
+
