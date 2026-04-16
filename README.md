@@ -2,7 +2,6 @@
 This repository contains the implementation of a modular NLP pipeline for processing clinical trial eligibility criteria. As part of a master's thesis, two models for Named Entity Recognition and two models for Relation Extraction were trained, with the goal to transform clinical trial eligibility criteria from free-text into a structured, machine-operable format. All models are based on BERT-derivatives and trained for task adaption on the Chia dataset by Kury et al. (2020) (https://doi.org/10.1038/s41597-020-00620-0). 
 
 
-
 # Project Structure
 ```
 eligibility-criteria-processing/
@@ -26,20 +25,28 @@ eligibility-criteria-processing/
 
 
 
-# ADJUST
-If downloading the trained models from this GitHub repository causes errors, try downloading the models from the backup upload on huggingface.
-For an introduction on how to download models from huggingface, see https://huggingface.co/docs/hub/models-downloading .
-The models on huggingface can be found here:
+# How to start
+To use the NER+RE pipeline on your local machine, apply the following steps:
+
+1. Clone this repository with the command  ```git clone https://github.com/guetmatt/eligibility-criteria-processing.git``` - this might take a while due to the size of the models and datasets
+2. Create a Python environment
+3. Install dependencies based on ```requirements.txt```
+4. Use the Python scripts in the directory ```src``` as described in the documentation below 
+
+If downloading the trained models from this GitHub repository causes errors, try downloading the models from the backup uploads on HuggingFace.
+The models can be found here:
 - https://huggingface.co/gutbier/NER_chia_tok
 - https://huggingface.co/gutbier/NER_chia_seq
 - https://huggingface.co/gutbier/RE_clinicalBERT
 - https://huggingface.co/gutbier/RE_sapBERT
 
+For instructions on how to download models from HuggingFace, see https://huggingface.co/docs/hub/models-downloading
+
 
 # Module Documentation & Usage
-The python scripts in the ```src/``` directory build a modular pipeline. Below is the functional breakdown and usage guide for each component.
+The python scripts in the ```src/``` directory build a modular NER and RE pipeline. Below is the functional breakdown and usage guide for each component.
 
-## ClinicalTrials.gov data preparation
+## Data Pre-processing
 ### ```parse_ctg.py```
 - Description
 	- Processes raw csv exports from ClinicalTrials.gov
@@ -219,7 +226,7 @@ The python scripts in the ```src/``` directory build a modular pipeline. Below i
 ```
 
 
-## Inference
+## Inference - Application of Trained Models
 ### ```pipeline_inference.py```
 - Description
 	- End-to-end pipeline to perform NER and RE on the ClinicalTrials.gov data
@@ -269,7 +276,7 @@ The python scripts in the ```src/``` directory build a modular pipeline. Below i
 ```
 
 
-## Data analysis
+## Data Analysis
 
 ### ```data_statistics.py```
 - Description
@@ -299,9 +306,13 @@ The python scripts in the ```src/``` directory build a modular pipeline. Below i
 
 
 ## Requirements
-- Python 3.8+
-- PyTorch
-- Transformers & Datasets (HuggingFace)
-- Optuna (for HPO)
-- Evaluate & Seqeval
-- Scikit-learn, Pandas, Numpy
+- Python
+- Datasets (HuggingFace)
+- Transformers (HuggingFace)
+- Evaluate
+- Numpy
+- Optuna
+- Pandas
+- Scikit_learn
+- Seaborn
+- Torch
