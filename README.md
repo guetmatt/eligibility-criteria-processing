@@ -1,17 +1,30 @@
-DATA PATHS AND ARGUMENT VALUES TO BE ADJUSTED!
+# Annotation and Reusability of Eligibility Criteria: Applying Natural Language Processing to Free-Text Descriptions in Clinical Trials
+This repository contains the implementation of a modular NLP pipeline for processing clinical trial eligibility criteria. As part of a master's thesis, two models for Named Entity Recognition and two models for Relation Extraction were trained, with the goal to transform clinical trial eligibility criteria from free-text into a structured, machine-operable format. All models are based on BERT-derivatives and trained for task adaption on the Chia dataset by Kury et al. (2020) (https://doi.org/10.1038/s41597-020-00620-0). 
 
 
-# Clinical Trial Information Extraction - NER + RE
-This repository contains the implementation of a modular NLP pipeline for processing clinical trial eligibility criteria. It leverages domain-specific BERT models (e.g., Bio_ClinicalBERT) to identify medical entities and the semantic relations between them.
 
-## Project Structure
-src/
-├── ner_parseChia.py      # Preprocesses Chia dataset for NER tasks
-├── ner_training.py       # Training and HPO for the NER model
-├── re_parseChia.py       # Preprocesses Chia dataset for RE tasks
-├── re_training.py        # Training and HPO for the RE model
-├── parse_ctg.py          # Parses raw data from ClinicalTrials.gov (CTG)
-└── pipeline_inference.py # End-to-end inference (NER -> Pair Generation -> RE)
+# Project Structure
+```
+eligibility-criteria-processing/
+├── data
+├── data_ctg
+├── models
+├── results
+├── src/
+│   ├── data_statistics.py
+│   ├── ner_parseChia.py 
+│   ├── ner_training.py
+│   ├── parse_ctg.py
+│   ├── pipeline_inference.py
+│   ├── re_parseChia.py
+│   └── re_training.py
+├── statistics
+├── training_notebooks
+└── requirements.txt
+```
+
+
+
 
 # ADJUST
 If downloading the trained models from this GitHub repository causes errors, try downloading the models from the backup upload on huggingface.
