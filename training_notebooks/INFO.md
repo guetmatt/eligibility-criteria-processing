@@ -1,0 +1,1 @@
+These are the jupyter notebooks used for NER and RE training. Uploaded for documentation purposes.
