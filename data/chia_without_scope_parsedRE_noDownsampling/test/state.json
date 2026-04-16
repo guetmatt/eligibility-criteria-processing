@@ -1,0 +1,24 @@
+{
+  "_data_files": [
+    {
+      "filename": "data-00000-of-00001.arrow"
+    }
+  ],
+  "_fingerprint": "7a94e5f5b73e79b6",
+  "_format_columns": [
+    "criteria_type",
+    "e1_end",
+    "e1_start",
+    "e1_type",
+    "e2_end",
+    "e2_start",
+    "e2_type",
+    "filename",
+    "label",
+    "text"
+  ],
+  "_format_kwargs": {},
+  "_format_type": null,
+  "_output_all_columns": false,
+  "_split": null
+}

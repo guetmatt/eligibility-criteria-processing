@@ -1,0 +1,61 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "e1_start": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "e1_end": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "e1_type": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "e2_start": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "e2_end": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "e2_type": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "label": {
+      "names": [
+        "NO_RELATION",
+        "AND",
+        "Has_context",
+        "Has_index",
+        "Has_mood",
+        "Has_multiplier",
+        "Has_negation",
+        "Has_qualifier",
+        "Has_temporal",
+        "Has_value",
+        "OR",
+        "Subsumes"
+      ],
+      "_type": "ClassLabel"
+    },
+    "criteria_type": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "filename": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}

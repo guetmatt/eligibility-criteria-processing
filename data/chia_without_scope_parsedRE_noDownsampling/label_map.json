@@ -1,0 +1,30 @@
+{
+    "label2id": {
+        "NO_RELATION": 0,
+        "AND": 1,
+        "Has_context": 2,
+        "Has_index": 3,
+        "Has_mood": 4,
+        "Has_multiplier": 5,
+        "Has_negation": 6,
+        "Has_qualifier": 7,
+        "Has_temporal": 8,
+        "Has_value": 9,
+        "OR": 10,
+        "Subsumes": 11
+    },
+    "id2label": {
+        "0": "NO_RELATION",
+        "1": "AND",
+        "2": "Has_context",
+        "3": "Has_index",
+        "4": "Has_mood",
+        "5": "Has_multiplier",
+        "6": "Has_negation",
+        "7": "Has_qualifier",
+        "8": "Has_temporal",
+        "9": "Has_value",
+        "10": "OR",
+        "11": "Subsumes"
+    }
+}
