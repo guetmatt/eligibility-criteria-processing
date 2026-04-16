@@ -6,10 +6,10 @@ This repository contains the implementation of a modular NLP pipeline for proces
 # Project Structure
 ```
 eligibility-criteria-processing/
-├── data
-├── data_ctg
-├── models
-├── results
+├── data		# Chia dataset for model training
+├── data_ctg		# ClinicalTrials.gov dataset
+├── models		# trained models
+├── results		# Results from applying trained models to ClinicalTrials.gov dataset
 ├── src/
 │   ├── data_statistics.py
 │   ├── ner_parseChia.py 
